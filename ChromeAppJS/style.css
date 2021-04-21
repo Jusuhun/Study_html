@@ -11,3 +11,12 @@ body {
     z-index: -1;
     animation: fadeIn 0.5s linear;
 }
+
+.form,
+.greetings {
+    display: none;
+}
+
+.showing {
+    display: block;
+}
