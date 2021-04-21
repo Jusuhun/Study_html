@@ -6,25 +6,39 @@ const USER_LS = "currentUser";
 const SHOWING_CN = "showing";
 
 function paintGreetings(text){
-    form.classList.remove(SHOWING_CN)
-    greeting.classList.add(SHOWING_CN)
-    greeting.innerText = `Hello ${text}`
+    form.classList.remove(SHOWING_CN);
+    greeting.classList.add(SHOWING_CN);
+    greeting.innerText = `Hello ${text}`;
+}
+
+function handleSubmit(event) {
+    event.preventDefault();
+    const currentValue = input.value;
+    
+    saveName(currentValue);
+    paintGreetings(currentValue);
+}
+
+function askForName(){
+    form.classList.add(SHOWING_CN);
+    form.addEventListener("submit", handleSubmit);
+}
+
+function saveName(text){
+    localStorage.setItem(USER_LS, text);
 }
 
 function loadName(){
     const currentUser = localStorage.getItem(USER_LS);
     if (currentUser === null) {
-        //she is not
-        form.classList.add(SHOWING_CN)
-        greeting.classList.remove(SHOWING_CN)
+        askForName();
     } else {
-        //she is not
         paintGreetings(currentUser);
     }
 }
 
 function init(){
-
+    loadName();
 }
 
 init();
