@@ -7,15 +7,15 @@ const TODOS_LS = "toDos";
 let toDos = [];
 
 function deleteToDo(event){
-    console.dir(event.target);
-    console.dir(event.target.parentNode);
+    //console.dir(event.target);
+    //console.dir(event.target.parentNode);
 
     const btn = event.target;
     const li = btn.parentNode;
 
     toDoList.removeChild(li);
     const cleanTodos = toDos.filter(function(toDo){
-        console.log(toDo.id , parseInt(li.id));
+        //console.log(toDo.id , parseInt(li.id));
         return toDo.id !== parseInt(li.id);
 
     });
