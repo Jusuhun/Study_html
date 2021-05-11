@@ -12,3 +12,5 @@ https://developer.mozilla.org/ko/docs/Web/API/Canvas_API
 ``` bash
 node main.js
 ```
+
+https://m.blog.naver.com/PostView.nhn?blogId=pjt3591oo&logNo=222010156379&proxyReferer=https:%2F%2Fwww.google.com%2F
