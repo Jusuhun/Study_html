@@ -8,3 +8,7 @@ https://developer.mozilla.org/ko/docs/Web/API/Canvas_API
 
 
 * undo 기능 추가
+
+``` bash
+node main.js
+```
